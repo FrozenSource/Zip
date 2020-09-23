@@ -28,7 +28,7 @@ set(This Zip)
 project(${This} LANGUAGES C CXX)
 
 InstallVendor(Core https://CorrupD:hiddenhand@git.nipqer.nl/CorrupD/Core.git)
-find_package(minizip)
+find_package(minizip CONFIG REQUIRED)
 
 set(Headers
         ${PROJECT_SOURCE_DIR}/include/Zip.hpp)
