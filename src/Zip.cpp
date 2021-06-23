@@ -1,4 +1,5 @@
 #include <Zip.hpp>
+#include <string>
 
 unzFile unzOpenBuffer(const void *buffer, int size)
 {
@@ -41,7 +42,7 @@ std::vector<std::filesystem::path> GetZipFilenames(const void *buffer, int size)
     auto oEntries = GetZipEntries(buffer, size);
     for (size_t uiIndex = 0; uiIndex < oEntries.size(); uiIndex++)
     {
-        string sEntry = oEntries[uiIndex].string();
+        std::string sEntry = oEntries[uiIndex].string();
         if (sEntry.at(sEntry.size() - 1) == '/' || sEntry.at(sEntry.size() - 1) == '\\')
         {
             oEntries.erase(oEntries.begin() + uiIndex);

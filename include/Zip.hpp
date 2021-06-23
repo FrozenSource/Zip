@@ -1,5 +1,6 @@
 #pragma once
-#include <Core.hpp>
+#include <vector>
+#include <filesystem>
 #include <minizip/unzip.h>
 #include <minizip/ioapi_mem.h>
 
